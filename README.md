@@ -2,9 +2,6 @@
 
 > A full-stack AI-powered learning platform designed to help students organize study material, create notes, generate flashcards, and interact with AI for personalized learning assistance.
 
-**Type:** Team Project  
-**Deployment:** Not currently deployed
-
 ---
 
 ## Overview
@@ -186,6 +183,11 @@ Development & Feature Implementation
 - [ ] Cloud deployment
 
 ---
+
+
+**Type:** Team Project  
+**Deployment:** Not currently deployed
+
 
 ## License
 
