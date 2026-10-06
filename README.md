@@ -31,22 +31,6 @@ flowchart LR
     A --> C
 ```
 
-**Request Flow:**
-
-```text
-User
- ↓
-Next.js / React
- ↓
-Node.js API
- ├── MongoDB
- └── AI Services
- ↓
-Response
- ↓
-User Interface
-```
-
 ---
 
 ## Key Features
