@@ -2,36 +2,26 @@
 
 > A full-stack AI-powered learning platform designed to help students organize study material, create notes, generate flashcards, and interact with AI for personalized learning assistance.
 
+**Status:** 🚧 Under Development  
+**Project Type:** Team Project  
+**Deployment:** Not currently deployed
+
 ---
 
 ## Overview
 
-The **AI Study Platform** combines modern web technologies and AI capabilities to create a centralized environment for smarter and more efficient learning.
+**AI Study Platform** is a full-stack web application that integrates AI into everyday learning workflows.
 
-The platform enables users to:
+The platform is designed to help students:
 
 - Create and manage study notes
-- Generate AI-powered flashcards from learning material
-- Interact with AI for concept explanations and study assistance
-- Organize learning resources in a structured workflow
+- Generate flashcards from learning material
+- Interact with AI for learning assistance
+- Organize study resources in a centralized platform
 
-The application follows a client-server architecture with a **Next.js/React frontend**, **Node.js backend**, and **MongoDB database**.
+The application follows a **client-server architecture** with a Next.js/React frontend, Node.js backend, and MongoDB database.
 
 ---
-
-## Architecture
-
-```mermaid
-flowchart LR
-    U[User] --> C[Next.js / React]
-    C --> A[Node.js API]
-    A --> D[(MongoDB)]
-    A --> AI[AI Services]
-    AI --> A
-    A --> C
-```
-
-**Request Flow:**
 
 ## Architecture
 
@@ -58,31 +48,58 @@ flowchart LR
     AI -->|Generated Content| API
     API -->|API Response| FE
     FE --> U
+```
+
+### Request Flow
+
+```text
+User
+  ↓
+Next.js / React Frontend
+  ↓
+Node.js Backend API
+  ├── MongoDB
+  └── AI Services
+  ↓
+API Response
+  ↓
+Frontend
+  ↓
+User
+```
 
 ---
 
 ## Key Features
 
-### Notes Management
-- Create, edit, and manage study notes
-- Organize learning content for revision
+### 📝 Notes Management
 
-### AI-Powered Flashcards
-- Convert study material into question-answer flashcards
-- Automate repetitive flashcard creation
+- Create and manage study notes
+- Organize learning material
+- Maintain reusable study content
 
-### AI Study Assistance
-- Ask questions about learning topics
-- Generate explanations and study-oriented responses
+### 🧠 AI-Powered Flashcards
 
-### Modular Full-Stack Architecture
+- Generate flashcards from study material
+- Convert learning content into question-answer pairs
+- Support efficient revision
+
+### 🤖 AI Study Assistance
+
+- Interact with AI for learning support
+- Ask questions about study topics
+- Generate explanations and learning-oriented responses
+
+### 🏗️ Full-Stack Architecture
+
 - Separate frontend and backend applications
-- REST-based communication between client and server
+- REST-based client-server communication
 - MongoDB-based persistent storage
+- Modular application structure
 
 ---
 
-## Tech Stack
+## Technology Stack
 
 | Layer | Technologies |
 |---|---|
@@ -90,7 +107,8 @@ flowchart LR
 | Backend | Node.js |
 | Database | MongoDB |
 | AI | AI-powered content generation |
-| Development | Git, GitHub, npm |
+| Version Control | Git, GitHub |
+| Package Management | npm |
 
 ---
 
@@ -99,13 +117,33 @@ flowchart LR
 ```text
 ai-study-platform/
 │
-├── client/              # Next.js / React frontend
+├── client/
+│   ├── app/
+│   ├── components/
+│   ├── public/
+│   └── ...
 │
-├── server/              # Node.js backend
+├── server/
+│   ├── routes/
+│   ├── controllers/
+│   ├── models/
+│   ├── services/
+│   └── ...
 │
 ├── LICENSE
 └── README.md
 ```
+
+### Directory Responsibilities
+
+| Directory | Responsibility |
+|---|---|
+| `client/` | Next.js / React frontend and user interface |
+| `server/` | Node.js backend, APIs, business logic and services |
+| `LICENSE` | MIT License |
+| `README.md` | Project documentation |
+
+> The internal folders shown above represent the intended application structure. Refer to the repository for the current implementation.
 
 ---
 
@@ -113,37 +151,41 @@ ai-study-platform/
 
 ### Prerequisites
 
+Make sure the following are installed:
+
 - Node.js 18+
 - npm
 - MongoDB
 - Git
 
-### Clone
+### Clone the Repository
 
 ```bash
 git clone https://github.com/rakeshpedapudi07/ai-study-platform.git
 cd ai-study-platform
 ```
 
-### Frontend
+### Install Frontend Dependencies
 
 ```bash
 cd client
 npm install
-npm run dev
 ```
 
-### Backend
+### Install Backend Dependencies
 
 Open a separate terminal:
 
 ```bash
 cd server
 npm install
-npm run dev
 ```
 
-> Configure the required environment variables before starting the backend.
+---
+
+## Environment Configuration
+
+Create the required environment configuration for the backend.
 
 Example:
 
@@ -153,7 +195,76 @@ MONGODB_URI=your_mongodb_connection_string
 AI_API_KEY=your_ai_api_key
 ```
 
-**Do not commit credentials or API keys to the repository.**
+> Environment variables depend on the services configured in the project. Never commit API keys, database credentials, or other secrets to GitHub.
+
+---
+
+## Running the Application
+
+### Start Backend
+
+```bash
+cd server
+npm run dev
+```
+
+### Start Frontend
+
+In a separate terminal:
+
+```bash
+cd client
+npm run dev
+```
+
+The frontend and backend run independently during development.
+
+---
+
+## Development Workflow
+
+```text
+Feature / Study Requirement
+          ↓
+Frontend Implementation
+          ↓
+Backend API
+          ↓
+Database / AI Services
+          ↓
+Integration & Testing
+          ↓
+Feature Completion
+```
+
+---
+
+## Project Goals
+
+The project focuses on applying practical software engineering concepts to an AI-enabled learning application:
+
+- Full-stack web development
+- REST API development
+- Database integration
+- AI service integration
+- Modular application architecture
+- Team-based software development
+- Maintainable and extensible code
+
+---
+
+## Future Enhancements
+
+- [ ] User authentication and authorization
+- [ ] AI-generated quizzes
+- [ ] Spaced-repetition flashcards
+- [ ] Learning progress dashboard
+- [ ] Personalized study plans
+- [ ] PDF/document-based learning
+- [ ] RAG-based question answering
+- [ ] Automated testing
+- [ ] Cloud deployment
+- [ ] CI/CD integration
 
 ---
 
@@ -163,7 +274,7 @@ AI_API_KEY=your_ai_api_key
 
 **Rakesh Pedapudi**
 
-Responsible for project architecture, development coordination, and overall implementation.
+Responsible for overall project direction, architecture, development coordination, and implementation.
 
 ### Team Members
 
@@ -175,34 +286,16 @@ Development & Feature Implementation
 
 ---
 
-## Project Goals
+## Project Status
 
-- Build a practical AI-assisted learning platform
-- Apply full-stack development principles
-- Integrate AI into real-world learning workflows
-- Develop a scalable and maintainable application architecture
-- Provide an extensible foundation for future learning features
+The project is currently **under development** and is **not publicly deployed**.
+
+The repository contains the source code for local development and continued feature development.
 
 ---
-
-## Future Enhancements
-
-- [ ] Learning progress analytics
-- [ ] Personalized study plans
-- [ ] PDF/document-based learning
-- [ ] RAG-based question answering
-- [ ] Automated testing
-- [ ] Cloud deployment
-
----
-
-
-**Type:** Team Project  
-**Deployment:** Not currently deployed
-
 
 ## License
 
 This project is licensed under the **MIT License**.
 
-See [LICENSE](LICENSE) for details.
+See the [LICENSE](LICENSE) file for details.
