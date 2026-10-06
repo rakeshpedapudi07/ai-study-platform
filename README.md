@@ -34,17 +34,17 @@ flowchart LR
 **Request Flow:**
 
 ```text
-User
- ↓
-Next.js / React
- ↓
-Node.js API
- ├── MongoDB
- └── AI Services
- ↓
-Response
- ↓
-User Interface
+    User
+     ↓
+    Next.js / React
+     ↓
+    Node.js API
+     ├── MongoDB
+     └── AI Services
+     ↓
+    Response
+     ↓
+    User Interface
 ```
 
 ---
