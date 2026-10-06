@@ -33,19 +33,31 @@ flowchart LR
 
 **Request Flow:**
 
-```text
-    User
-     ↓
-    Next.js / React
-     ↓
-    Node.js API
-     ├── MongoDB
-     └── AI Services
-     ↓
-    Response
-     ↓
-    User Interface
-```
+## Architecture
+
+```mermaid
+flowchart LR
+    U[User]
+
+    subgraph Frontend["Frontend"]
+        FE[Next.js / React]
+    end
+
+    subgraph Backend["Backend"]
+        API[Node.js API]
+    end
+
+    DB[(MongoDB)]
+    AI[AI Services]
+
+    U --> FE
+    FE -->|HTTP / API Requests| API
+    API -->|Read / Write| DB
+    API -->|AI Requests| AI
+    DB -->|Data| API
+    AI -->|Generated Content| API
+    API -->|API Response| FE
+    FE --> U
 
 ---
 
