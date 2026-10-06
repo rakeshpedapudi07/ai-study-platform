@@ -129,24 +129,6 @@ AI_API_KEY=your_ai_api_key
 
 ---
 
-## Team
-
-### Project Lead
-
-**Rakesh Pedapudi**
-
-Responsible for project architecture, development coordination, and overall implementation.
-
-### Team Members
-
-**Akash Gummela**  
-Full-Stack Development & Feature Implementation
-
-**Nagesh Bantu**  
-Development & Feature Implementation
-
----
-
 ## Project Goals
 
 - Build a practical AI-assisted learning platform
@@ -170,7 +152,24 @@ Development & Feature Implementation
 **Status:** 🚧 Under Development  
 **Type:** Team Project  
 **Deployment:** Not currently deployed
+---
+## Team
 
+### Project Lead
+
+**Rakesh Pedapudi**
+
+Responsible for project architecture, development coordination, and overall implementation.
+
+### Team Members
+
+**Akash Gummela**  
+Full-Stack Development & Feature Implementation
+
+**Nagesh Bantu**  
+Development & Feature Implementation
+
+---
 ## License
 
 This project is licensed under the **MIT License**.
